@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Exercice 4 b corrigé</title>
+</head>
+<body>
+	<form>Entre un numéro de couleur <input type="text" onblur="changeCouleurUtilisateur(this.value)"/></form>
+	<div id="conteneur" class="fondblue">
+		<h1>Les CSS</h1>
+		<p>Du code JavaScript peut être intégré directement au sein des pages web, pour y être exécuté sur le poste client. C'est alors le navigateur web qui prend en charge l'exécution de ces programmes appelés scripts.</p>
+	</div>	
+</body>
+<script type="text/javascript">
+<!--
+// monscript.js
+
+//ex 4b1
+function changeCouleurUtilisateur(couleur){
+	//ex 4b.1
+	//document.getElementById("conteneur").style.backgroundColor= couleur;
+	//ex 4b.2
+	document.getElementById("conteneur").style.backgroundColor= "#"+couleur;
+}
+
+//-->
+</script>
+</html>
