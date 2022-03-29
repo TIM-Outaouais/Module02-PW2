@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Ecrire dans un formulaire</title>
+<style>
+	.styleInput{
+		
+		font-size:44px;
+	}
+	.styleTexte{
+		
+		font-family:Arial;
+		color:green;
+	
+	}
+</style>
+</head>
+<body>
+<div id="conteneur">
+	<header>
+		<h1 id="nomDeLaquestion">Question 1</h1>
+	</header>
+	<section id="questionnaire">
+		<form>
+			<p>Effectuer le calcul suivant et entrer la réponse</p>
+			<p>2+3 = </p> 
+			<input type="text" name="choix" id="choix" class="styleTexte" />
+		
+			<input type="button" value="Cliquez pour valider votre choix" onmousedown="repondre();" />
+		</form>
+	</section>
+	<section id="resultat">
+		<div id="retroaction"></div>
+	</section>
+	<footer>
+			<p>&copy; Cégep de l'Outaouais, TIM 2022</p>
+	</footer>
+</div>
+</body>
+<script type="text/javascript">
+<!--
+	function repondre(){
+		//alert("test");
+		document.getElementById("retroaction").innerHTML = "La bonne réponse est 5. Vous avez répondu : ";
+		document.getElementById("retroaction").innerHTML += document.getElementById("choix").value ;
+
+	}
+
+//-->
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

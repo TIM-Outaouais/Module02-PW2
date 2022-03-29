@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<style>
+		#tableau-reactif img{width:100%; height:100%;}
+		#tableau-reactif{
+		    display:grid;
+		    grid-template-columns:auto auto auto auto;
+		   	grid-template-rows:200px 200px 200px;
+		    grid-gap:5px;
+		    justify-content: center;
+		    border:1px solid black;
+		    padding:5px;
+		    text-align:center;
+		    background-color:#ccaacc;
+		    /*grid-auto-flow: columns; */
+		}
+		.cellule{
+		    padding:5px;
+		    background-color:#99ffff;
+		    text-align: center;
+		    vertical-align:middle;
+		}
+		.cel1 {
+		    grid-area:1/1/span 2/span 2;
+		}
+		.cel3{
+			grid-area:1/3/1/span 2;
+		}
+		.cel5{ /* exercice b */
+			grid-area:2/2/2/span 2;
+		}
+		.cel4{ /* exercice b */
+			grid-row-start:2;
+			grid-row-end:4;
+		}
+		.cel6{ /* exercice b */
+			grid-colums-start:4;
+			grid-colums-end:4;
+			grid-row-start:1;
+			grid-row-end:4;
+		}
+	</style>
+</head>
+<body>
+	<!-- grid -->
+	<div id="tableau-reactif">
+		<div class="cel1 cellule"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/frost_abstract.jpg" title="Close up of ice crystals on branches by www.freeimages.co.uk" />
+		</div>
+		<div class="cel2 cellule" id="cel02"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/frosted_seed_head.jpg" title="Frozen Plant Seed Head Covered in Frost by www.freeimages.co.uk" /></div>
+		<div class="cel3 cellule"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/arboretum_tree_rings.jpg" title="Concentric growth rings on a tree by www.freeimages.co.uk" /></div>
+		<div class="cel4 cellule"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/quarry02352.jpg" title="Open cast quarry by www.freeimages.co.uk" /></div>
+		<div class="cel5 cellule"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/eaten_grapes.jpg" title="Bunch of eaten grapes by www.freeimages.co.uk" /></div>
+		<div class="cel6 cellule"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/snow_surface.jpg" title="snow background by www.freeimages.co.uk" /></div>
+		<div class="cel7 cellule" ><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/naturerocks00001.jpg" title="industrial ruins by www.freeimages.co.uk" /></div>
+	 	<div class="cel8 cellule" id="cel08"><img src="http://www.freeimageslive.com/galleries/nature/abstract/preview/wet_fallen_leaves.jpg" title="wet leaves by www.freeimages.co.uk" /></div>
+	</div>	
+	<p><a href="#" onclick="changerPosition();">Cliquez changer la position</a></p>
+
+	<!-- fin du grid -->			
+</body>
+<script type="text/javascript">
+<!--
+	function changerPosition(){
+		// photo 1 à placer à la position colonne 3 rangée 2 
+		// Photo 8 4 doit prendre 2 colonne et 2 rangées
+		document.getElementById("cel02").style.gridArea = "3/2";
+		document.getElementById("cel08").style.gridArea = "2/3/span 2";
+	}
+//-->
+</script>
+</html>

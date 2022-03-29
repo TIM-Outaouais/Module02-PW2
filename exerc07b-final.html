@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Récupérer une var CSS avec Javacript</title>
+<style type="text/css">
+*{
+	--vert-pomme:#00FF7F;
+
+}
+div#conteneur{
+	padding: 0 5px 5px 15px;
+}
+</style>
+</head>
+<body>
+	<p><a href="#" onmouseover="appliquerCouleurPomme('--vert-pomme');">Survoler ce lien pour appliquer la couleur de la variable vert-pomme</a></p>
+	<div id="conteneur">
+		<h1>Les CSS</h1>
+		<p>Du code JavaScript peut être intégré directement au sein des pages web, pour y être exécuté sur le poste client. C'est alors le navigateur web qui prend en charge l'exécution de ces programmes appelés scripts.</p>
+	</div>
+	
+</body>
+<script type="text/javascript">
+<!--
+// monscript.js
+// 4 c)
+function appliquerCouleurPomme(nomVariable){
+	document.getElementById("conteneur").style.backgroundColor = "var("+nomVariable+")";
+	console.log(document.getElementById("conteneur").style.backgroundColor)
+}
+//-->
+</script>
+</html>
